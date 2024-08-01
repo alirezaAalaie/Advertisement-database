@@ -1,0 +1,149 @@
+### get all Campaigns
+GET http://localhost:8080/api/Campaign
+
+### get one Campaign with your ID
+GET http://localhost:8080/api/Campaign/1
+
+### create Campaign
+POST http://localhost:8080/api/Campaign/create
+Content-Type: application/json
+
+{
+  "advertiserID" : 1 ,
+  "name" : "name" ,
+  "startDate" :  "startDate" ,
+  "endDate" :  "endDate",
+  "budget" : 1000
+}
+
+### update campaign
+PUT http://localhost:8080/api/Campaign/{id}/update
+Content-Type: application/json
+
+{
+  "name" : "name" ,
+  "startDate" :  "startDate" ,
+  "endDate" :  "endDate",
+  "budget" : 1000
+}
+
+### delete campaign
+DELETE http://localhost:8080/api/Campaign/{id}/delete
+
+
+
+
+
+### get all ADslot
+GET http://localhost:8080/api/AdSlot
+
+### get Ad slot by Id
+GET http://localhost:8080/api/AdSlot/{id}
+
+### create adslot
+POST http://localhost:8080/api/AdSlot/create
+Content-Type: application/json
+
+{
+
+  "webIID" : "webIID" ,
+  "slotLocation" : "slotLocation" ,
+  "slotDimension" :"slotDimension" ,
+  "numberOfAds" : "numberOfAds" ,
+  "slotType" : "slotType"
+}
+
+### updat ADslot by AdSlotId
+PUT http://localhost:8080/api/AdSlot/{id}/update
+Content-Type: application/json
+
+{
+  "slotLocation" : "slotLocation" ,
+  "slotDimension" :"slotDimension" ,
+  "numberOfAds" : "numberOfAds" ,
+  "slotType" : "slotType"
+}
+
+### delete Adslot by AdSlotId
+DELETE http://localhost:8080/api/AdSlot/{id}/delete
+
+
+### same as privious for Advertiser
+###
+GET http://localhost:8080/api/Advertisers
+
+###
+GET http://localhost:8080/api/Advertisers/{id}
+
+###
+POST http://localhost:8080/api/Advertisers/create
+Content-Type: application/json
+
+{
+  "name": "name",
+  "contactInfo" :  "contactInfo",
+  "industryType" :  "industryType"
+}
+###
+PUT http://localhost:8080/api/Advertisers/1/update
+Content-Type: application/json
+
+{
+  "name": "name",
+  "contactInfo" :  "contactInfo",
+  "industryType" :  "industryType1"
+}
+###
+DELETE http://localhost:8080/api/Advertisers/{{id}}/delete
+
+
+
+
+### same as privious for Bill
+###
+GET http://localhost:8080/api/Bill
+
+###
+GET http://localhost:8080/api/Bill/{{id}}
+
+###
+POST http://localhost:8080/api/Bill/create
+Content-Type: application/json
+
+{
+  "campaignID" : "campaignID" ,
+  "advertiserID" : "advertiserID" ,
+  "billRate" : "billRate" ,
+  "billAmount" : "billAmount",
+  "billStatus" : "billStatus"
+}
+###
+PUT http://localhost:8080/api/Bill/{{id}}/update
+Content-Type: application/json
+
+{
+  "billRate" : "billRate" ,
+  "billAmount" : "billAmount",
+  "billStatus" : "billStatus"
+}
+###
+DELETE http://localhost:8080/api/Bill/{{id}}/delete
+
+
+
+### same
+GET http://localhost:8080/api/Performance
+
+###
+GET http://localhost:8080/api/Performance/{{id}}
+
+###
+POST http://localhost:8080/api/Performance/create
+Content-Type: application/json
+
+{
+  "campaignID" : 1 ,
+  "impressions" : 10,
+  "clicks" : 100 ,
+  "successfulClicks" : 10
+}
